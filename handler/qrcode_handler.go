@@ -32,7 +32,13 @@ type QRCodeHandler struct {
 func (h *QRCodeHandler) Do(c *Context) (err error) {
 	//生成二维码
 	// qrImage, err := core.DrawQRImage(url, qrcode.Medium, 164)
-	qrImage, err := core.DrawQRImage(h.URL, qrcode.Medium, 132)
+	if h.Size == 0 {
+		h.Size = 132
+	}
+	if h.Level == 0 {
+		h.Level = qrcode.Medium
+	}
+	qrImage, err := core.DrawQRImage(h.URL, h.Level, h.Size)
 	if err != nil {
 		return fmt.Errorf("core.DrawQRImage err：%v", err)
 	}
