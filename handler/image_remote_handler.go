@@ -29,11 +29,13 @@ func (h *ImageRemoteHandler) Do(c *Context) (err error) {
 	srcReader, err := core.GetResourceReader(h.URL)
 	if err != nil {
 		fmt.Errorf("core.GetResourceReader err：%v", err)
+		return
 	}
 	srcImage, imageType, err := image.Decode(srcReader)
 	_ = imageType
 	if err != nil {
 		fmt.Errorf("SetRemoteImage image.Decode err：%v", err)
+		return
 	}
 	srcPoint := image.Point{
 		X: h.X,

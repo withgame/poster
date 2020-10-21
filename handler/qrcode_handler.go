@@ -40,7 +40,8 @@ func (h *QRCodeHandler) Do(c *Context) (err error) {
 	}
 	qrImage, err := core.DrawQRImage(h.URL, h.Level, h.Size)
 	if err != nil {
-		return fmt.Errorf("core.DrawQRImage err：%v", err)
+		fmt.Errorf("core.DrawQRImage err：%v", err)
+		return
 	}
 	// 把二维码合并到pngCarrier
 	qrPoint := image.Point{X: h.X, Y: h.Y}

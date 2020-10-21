@@ -31,12 +31,14 @@ func (h *ImageCircleLocalHandler) Do(c *Context) (err error) {
 	imageFile, err := os.Open(h.Path)
 	if err != nil {
 		fmt.Errorf("os.Open err：%v", err)
+		return
 	}
 
 	srcImage,_,err := image.Decode(imageFile)
 
 	if err != nil {
 		fmt.Errorf("SetRemoteImage image.Decode err：%v", err)
+		return
 	}
 	// 算出图片的宽度和高试
 	width := srcImage.Bounds().Max.X - srcImage.Bounds().Min.X

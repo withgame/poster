@@ -32,10 +32,12 @@ func (h *ImageLocalHandler) Do(c *Context) (err error) {
 	imageFile, err := os.Open(h.Path)
 	if err != nil {
 		fmt.Errorf("os.Open err：%v", err)
+		return
 	}
 	srcImage, err := png.Decode(imageFile)
 	if err != nil {
 		fmt.Errorf("png.Decode err：%v", err)
+		return
 	}
 	srcPoint := image.Point{
 		X: h.X,

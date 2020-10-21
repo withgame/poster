@@ -38,6 +38,7 @@ func (h *TextHandler) Do(c *Context) (err error) {
 	trueTypeFont, err := core.LoadTextType(h.FontPath)
 	if err != nil {
 		fmt.Errorf("core.LoadTextType err：%v", err)
+		return
 	}
 
 	dText := core.NewDrawText(c.PngCarrier)

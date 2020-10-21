@@ -32,10 +32,12 @@ func (h *BackgroundHandler) Do(c *Context) (err error) {
 	bgFile, err := os.Open(h.Path)
 	if err != nil {
 		fmt.Errorf("os.Open err：%s", err)
+		return
 	}
 	bgImage, err := png.Decode(bgFile)
 	if err != nil {
 		fmt.Errorf("png.Decode err：%v", err)
+		return
 	}
 	bgPoint := image.Point{
 		X: h.X,

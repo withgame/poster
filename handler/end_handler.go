@@ -28,6 +28,7 @@ func (h *EndHandler) Do(c *Context) (err error) {
 	merged, err := core.NewMerged(h.Output)
 	if err != nil {
 		fmt.Errorf("core.NewMerged err：%v", err)
+		return
 	}
 	// 合并
 	err = core.Merge(c.PngCarrier, merged)

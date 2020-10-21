@@ -10,6 +10,7 @@ package core
 
 import (
 	"bytes"
+	"crypto/tls"
 	"image"
 	"image/color"
 	"image/draw"
@@ -17,6 +18,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/golang/freetype"
 	"github.com/golang/freetype/truetype"
@@ -155,7 +157,12 @@ func DrawQRImage(url string, level qrcode.RecoveryLevel, size int) (image.Image,
 
 func GetResourceReader(url string) (r *bytes.Reader, err error) {
 	if url[0:4] == "http" {
-		resp, err := http.Get(url)
+		timeout := time.Duration(60) * time.Second
+		tr := &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		}
+		client := &http.Client{Transport: tr, Timeout: timeout}
+		resp, err := client.Get(url)
 		if err != nil {
 			return r, err
 		}
