@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"testing"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 
 	"github.com/rs/xid"
 )

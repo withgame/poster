@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"image"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 
 	"github.com/skip2/go-qrcode"
 )

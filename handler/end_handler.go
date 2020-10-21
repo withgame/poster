@@ -11,7 +11,7 @@ package handler
 import (
 	"fmt"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 )
 
 // EndHandler 结束，写在最后，把图片合并到一张图上

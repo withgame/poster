@@ -11,8 +11,8 @@ package main
 import (
 	"fmt"
 
-	"poster/core"
-	"poster/handler"
+	"github.com/withgame/poster/core"
+	"github.com/withgame/poster/handler"
 
 	"github.com/rs/xid"
 )

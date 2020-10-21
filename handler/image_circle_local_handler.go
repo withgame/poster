@@ -13,8 +13,8 @@ import (
 	"image"
 	"os"
 
-	"poster/circlemask"
-	"poster/core"
+	"github.com/withgame/poster/circlemask"
+	"github.com/withgame/poster/core"
 )
 // ImageCircleLocalHandler 根据Path路径设置圆形图片
 type ImageCircleLocalHandler struct {

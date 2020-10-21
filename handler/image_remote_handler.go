@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"image"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 )
 
 // ImageRemoteHandler 根据URL地址设置图片

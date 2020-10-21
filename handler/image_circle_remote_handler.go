@@ -12,8 +12,8 @@ import (
 	"fmt"
 	"image"
 
-	"poster/circlemask"
-	"poster/core"
+	"github.com/withgame/poster/circlemask"
+	"github.com/withgame/poster/core"
 )
 
 // ImageCircleRemoteHandler 根据URL地址设置圆形图片

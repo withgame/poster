@@ -14,7 +14,7 @@ import (
 	"image/png"
 	"os"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 )
 
 // BackgroundHandler

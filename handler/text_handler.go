@@ -11,7 +11,7 @@ package handler
 import (
 	"fmt"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 )
 
 // TextHandler

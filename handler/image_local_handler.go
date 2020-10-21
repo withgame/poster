@@ -14,7 +14,7 @@ import (
 	"image/png"
 	"os"
 
-	"poster/core"
+	"github.com/withgame/poster/core"
 )
 
 // ImageLocalHandler 根据本地PATH设置图片
