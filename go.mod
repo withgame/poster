@@ -1,4 +1,4 @@
-module poster
+module github.com/withgame/poster
 
 go 1.15
 

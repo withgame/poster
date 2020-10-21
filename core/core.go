@@ -10,9 +10,6 @@ package core
 
 import (
 	"bytes"
-	"github.com/golang/freetype"
-	"github.com/golang/freetype/truetype"
-	"github.com/skip2/go-qrcode"
 	"image"
 	"image/color"
 	"image/draw"
@@ -20,6 +17,10 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+
+	"github.com/golang/freetype"
+	"github.com/golang/freetype/truetype"
+	"github.com/skip2/go-qrcode"
 )
 
 //新PNG载体
