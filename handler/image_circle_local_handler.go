@@ -10,10 +10,11 @@ package handler
 
 import (
 	"fmt"
-	"github.com/hitailang/poster/circlemask"
-	"github.com/hitailang/poster/core"
 	"image"
 	"os"
+
+	"poster/circlemask"
+	"poster/core"
 )
 // ImageCircleLocalHandler 根据Path路径设置圆形图片
 type ImageCircleLocalHandler struct {

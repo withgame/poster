@@ -10,10 +10,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/hitailang/poster/core"
-	"github.com/hitailang/poster/handler"
-	"github.com/rs/xid"
 
+	"poster/core"
+	"poster/handler"
+
+	"github.com/rs/xid"
 )
 
 // 海报组件使用示例
@@ -32,8 +33,8 @@ func main() {
 	}
 	//绘制圆形图像
 	imageCircleHandler := &handler.ImageCircleLocalHandler{
-		X:   30,
-		Y:   50,
+		X:    30,
+		Y:    50,
 		Path: "./assets/reward.png",
 		//URL: "http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLJT9ncWLPov6rAzn4VCPSC4QoAvdangHRB1JgszqCvffggAysvzpm5MDb72Io4g9YAScHEw7xSWg/132",
 	}

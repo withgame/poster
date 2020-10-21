@@ -10,18 +10,22 @@ package handler
 
 import (
 	"fmt"
-	"github.com/hitailang/poster/core"
-	"github.com/skip2/go-qrcode"
 	"image"
+
+	"poster/core"
+
+	"github.com/skip2/go-qrcode"
 )
 
-// BackgroundHandler
+// QRCodeHandler
 type QRCodeHandler struct {
 	// 合成复用Next
 	Next
-	X   int
-	Y   int
-	URL string
+	X     int
+	Y     int
+	URL   string
+	Size  int
+	Level qrcode.RecoveryLevel
 }
 
 // Do 地址逻辑
@@ -30,7 +34,7 @@ func (h *QRCodeHandler) Do(c *Context) (err error) {
 	// qrImage, err := core.DrawQRImage(url, qrcode.Medium, 164)
 	qrImage, err := core.DrawQRImage(h.URL, qrcode.Medium, 132)
 	if err != nil {
-		fmt.Errorf("core.DrawQRImage err：%v", err)
+		return fmt.Errorf("core.DrawQRImage err：%v", err)
 	}
 	// 把二维码合并到pngCarrier
 	qrPoint := image.Point{X: h.X, Y: h.Y}

@@ -1,0 +1,17 @@
+# github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
+## explicit
+github.com/golang/freetype
+github.com/golang/freetype/raster
+github.com/golang/freetype/truetype
+# github.com/rs/xid v1.2.1
+## explicit
+github.com/rs/xid
+# github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
+## explicit
+github.com/skip2/go-qrcode
+github.com/skip2/go-qrcode/bitset
+github.com/skip2/go-qrcode/reedsolomon
+# golang.org/x/image v0.0.0-20200927104501-e162460cd6b5
+## explicit
+golang.org/x/image/font
+golang.org/x/image/math/fixed
